@@ -1,0 +1,107 @@
+/* #click{
+    background-color: hsl(0, 8%, 14%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 100px;
+    margin-top: 60px;
+    transition: all 0.8s;
+}
+
+#click:hover{
+    cursor: pointer;
+    background-color: hsl(0, 1%, 38%);
+}
+#click:active{
+    background-color: hsl(0, 6%, 70%);
+}
+     */
+     @keyframes fade-in{
+        0%{
+            opacity: 0;
+            transform: translate(15px);
+        }
+        100%{
+            opacity: 100%;
+            transform: translate(0px);
+        }
+    }
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: #0a0a0a;
+    animation:  fade-in 0.4s;
+}
+#video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire background */
+    z-index: -1;
+}
+#seet1{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+#clock-conteiner{
+    display: flex;
+    justify-content: center;
+}
+#month1{
+    display: flex;
+    justify-content: center;
+}
+#month{
+    font-size: 35px;
+    font-weight: 900;
+    text-decoration: underline;
+    color: hsla(86, 85%, 47%, 0.514);
+}
+#clock{
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: 900;
+    background: rgba(54, 54, 54, 0);
+    backdrop-filter: blur(20px);
+    text-align: center;
+}
+@media (max-width: 768px) {
+    #month {
+        font-size: 28px; /* Smaller font size for tablets */
+    }
+    
+    #clock {
+        font-size: 24px; /* Smaller font size for tablets */
+    }
+    
+    #seet1 {
+        margin-top: 15%; /* Adjust margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #month {
+        font-size: 22px; /* Smaller font size for mobile */
+    }
+    
+    #clock {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+
+    #seet1 {
+        margin-top: 10%; /* Further adjustment for mobile */
+    }
+}
